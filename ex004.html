@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <style>
+        body{
+            background: cadetblue;
+            font:bold 15pt arial;
+            color: white;
+        }
+        div#res{
+            font: bold 15px arial;
+            margin-top: 15px;
+        }
+        div#res1{
+            font: bold 15px arial;
+            margin-top: 15px;
+        }
+        div#res2{
+            font: bold 15px arial;
+            margin-top: 15px;
+        }
+        div#res3{
+            font: bold 15px arial;
+            margin-top: 15px;
+        }
+        p{
+            color: rgb(0, 0, 0);
+            margin-bottom: -27px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Calculadora básica:
+    </h1>
+    <p>Soma</p>
+    <br><input type="number" name='txtn1' id='txtn1'> +
+    <input type="number" name='txtn2' id='txtn2'>
+    <input type="button" value="Somar" onclick="soma()"></br>
+    
+    <div id = 'res'>
+        Resultado
+    </div>
+    <script>
+        function soma(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            n1 = Number(tn1.value)
+            n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+
+        }
+    </script>
+    <p>Subtração</p> 
+    <br><input type="number" name="txtn3" id="txtn3"> -
+    <input type="number" name="txtn4" id="txtn4">
+    <input type="button" value="Somar" onclick="somar1()"></br>
+
+    <div id = 'res1'>
+        Resultado
+    </div>
+    <script>
+        function somar1(){
+            var tn3 = window.document.getElementById('txtn3')
+            var tn4 = window.document.getElementById('txtn4')
+            var res1 = window.document.getElementById('res1')
+            n3 = Number(tn3.value)
+            n4 = Number(tn4.value)
+            var s1 = n3 - n4
+            res1.innerHTML = `A subtração entre ${n3} e ${n4} é igual a ${s1}`
+        }
+    </script>
+
+    <p>Multiplicação</p> 
+    <br><input type="number" name="txtn5" id="txtn5"> x
+    <input type="number" name="txtn6" id="txtn6">
+    <input type="button" value="Somar" onclick="soma3()">
+
+    <div id = 'res2'>
+        Resultado
+    </div>
+    <script>
+        function soma3(){
+            var tn5 = window.document.getElementById('txtn5')
+            var tn6 = window.document.getElementById('txtn6')
+            var res2 = window.document.getElementById('res2')
+            n5 = Number(tn5.value)
+            n6 = Number(tn6.value)
+            var s2 = n5 * n6
+            res2.innerHTML = `A multiplicação entre ${n5} e ${n6} é igual a ${s2}`       
+        }    
+    </script>
+
+    <p>Divisão</p>
+    <br><input type="number" name="txtn7" id="txtn7"> /
+    <input type="number" name="txtn8" id="txtn8">
+    <input type="button" value="Somar" onclick="soma4()">
+
+    <div id="res3">
+        Resultado
+    </div>
+
+    <script>
+        function soma4(){
+            var tn7 = window.document.getElementById('txtn7')
+            var tn8 = window.document.getElementById('txtn8')
+            var res3 = window.document.getElementById('res3')
+            n7 = Number(tn7.value)
+            n8 = Number(tn8.value)
+            var s3 = n7 / n8
+            res3.innerHTML = `A divisão entre ${n7} e ${n8} é igual a ${s3}`
+        }
+    </script>
+</body>
+</html>
